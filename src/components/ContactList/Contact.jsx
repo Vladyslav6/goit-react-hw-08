@@ -12,11 +12,13 @@ const Contact = ({ DataItem: { name, number, id } }) => {
           <p>{number}</p>
         </div>
         <button
-          className={css.deleteButton}
+          // className={css.deleteButton}
+          className="btn btn-xs btn-soft btn-primary"
           onClick={() => dispatch(deleteContactData(id))}
         >
           Delete
         </button>
+        {/* <button className="btn btn-soft btn-primary">Primary</button> */}
       </div>
     </>
   );
