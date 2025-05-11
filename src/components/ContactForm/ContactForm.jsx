@@ -45,21 +45,25 @@ const ContactFrom = () => {
       >
         <Form>
           <div className={css.formWrapper}>
+            <div>
             <label> Name</label>
-            <Field name="name" placeholder="enter name"></Field>
-            <ErrorMessage name="name" className={css.error} component="div" />
-
-            <label>Number</label>
+            <Field name="name" placeholder="Enter name" className="input mb-2"></Field>
+            <ErrorMessage  name="name" className={css.error} component="div" />
+        
+            </div>
+            <label >Number</label>
             <Field
+            className="input"
               name="number"
               type="tell"
-              placeholder="enter number phone"
+              placeholder="Enter number phone"
             ></Field>
             <ErrorMessage name="number" className={css.error} component="div" />
 
-            <button type="submit" className={css.buttonSubmit}>
+            <button type="submit" className="btn m-auto w-30 btn-xs btn-dash btn-primary">
               Add contact
             </button>
+           
           </div>
         </Form>
       </Formik>

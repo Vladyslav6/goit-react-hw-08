@@ -5,7 +5,7 @@ import SearchBox from "../../components/SearchBox/SearchBox";
 
 const ContactsItem = () => {
   return (
-    <div>
+    <div className="ml-2">
       <div>
         <h1>Phonebook</h1>
         <ContactFrom />
