@@ -1,18 +1,20 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
 import { Field, Form, Formik } from "formik";
+import React from "react";
 import { useDispatch } from "react-redux";
-import { loginThunk } from "../../redux/auth/operations";
+import { NavLink } from "react-router-dom";
+import { registerThunk } from "../../redux/auth/operations";
 
-const LoginForm = () => {
+const RegisterForm = () => {
   const dispatch = useDispatch();
   const initialValues = {
+    name: "",
     email: "",
     password: "",
   };
   const handleSubmit = (values, options) => {
-    dispatch(loginThunk(values));
     console.log(values);
+    dispatch(registerThunk(values));
+    // options.resetForm();
   };
 
   return (
@@ -20,7 +22,7 @@ const LoginForm = () => {
       <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
+            <h1 className="text-5xl font-bold">Register now!</h1>
             <p className="py-6">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
               excepturi mollitia delectus obcaecati? Veritatis quaerat
@@ -37,6 +39,13 @@ const LoginForm = () => {
               <Formik initialValues={initialValues} onSubmit={handleSubmit}>
                 <Form>
                   <fieldset className="fieldset">
+                    <label className="label">Name</label>
+                    <Field
+                      name="name"
+                      type="name"
+                      className="input"
+                      placeholder="Name"
+                    />
                     <label className="label">Email</label>
                     <Field
                       name="email"
@@ -52,8 +61,8 @@ const LoginForm = () => {
                       placeholder="Password"
                     />
                     <div className="m-auto">
-                      <NavLink className="link link-hover" to="/register">
-                        I haven't accaunt yet?
+                      <NavLink className="link link-hover" to="/login">
+                        I have an account
                       </NavLink>
                     </div>
                     <div className="m-auto">
@@ -62,7 +71,7 @@ const LoginForm = () => {
                       </NavLink>
                     </div>
                     <button type="submit" className="btn btn-neutral mt-4">
-                      Login
+                      Register
                     </button>
                   </fieldset>
                 </Form>
@@ -76,4 +85,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default RegisterForm;

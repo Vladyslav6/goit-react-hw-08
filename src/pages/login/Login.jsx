@@ -1,19 +1,21 @@
 import React from "react";
-import RegisterForm from "../../components/RegisterForm/RegisterForm";
+
+import LoginForm from "../../components/LoginForm/LoginForm";
 import { useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { selectIsloggetIn } from "../../redux/auth/selectors";
 
-const register = () => {
+const Login = () => {
   const isLoggedIn = useSelector(selectIsloggetIn);
   if (isLoggedIn) {
     return <Navigate to="/" />;
   }
+
   return (
     <>
-      <RegisterForm />
+      <LoginForm />
     </>
   );
 };
 
-export default register;
+export default Login;

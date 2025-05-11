@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactFrom from "../../components/ContactForm/ContactForm";
 import ContactList from "../../components/ContactList/ContactList";
 import SearchBox from "../../components/SearchBox/SearchBox";
+import { useDispatch } from "react-redux";
+import { fetchContactsData } from "../../redux/contacts/contactsOps";
 
 const ContactsItem = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchContactsData());
+  }, [dispatch]);
   return (
     <div className="ml-2">
       <div>
