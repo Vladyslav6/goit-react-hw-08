@@ -4,8 +4,8 @@ import { ErrorMessage } from "formik";
 import css from "./ContactForm.module.css";
 import { nanoid } from "nanoid";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/ContactSlice";
-import { addContactDataThunk } from "../../redux/contactsOps";
+
+import { addContactDataThunk } from "../../redux/contacts/contactsOps";
 
 const ContactFrom = () => {
   const dispatch = useDispatch();
