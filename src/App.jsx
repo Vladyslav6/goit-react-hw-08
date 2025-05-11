@@ -1,4 +1,4 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { useEffect } from "react";
 import { fetchContactsData } from "./redux/contacts/contactsOps";
@@ -10,14 +10,17 @@ import NotFound from "./pages/notFound/notFound";
 import ContactsItem from "./pages/contactsItem/ContactsItem";
 
 import Layout from "./components/Layout/Layout";
+import { refreshThunk } from "./redux/auth/operations";
+import { selectIsRefreshing } from "./redux/auth/selectors";
 //
 //
 function App() {
   const dispatch = useDispatch();
+  const isRefreshing = useSelector(selectIsRefreshing);
   useEffect(() => {
-    dispatch(fetchContactsData());
+    dispatch(refreshThunk());
   }, [dispatch]);
-  return (
+  return isRefreshing ? null : (
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
