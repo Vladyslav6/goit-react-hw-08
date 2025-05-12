@@ -1,14 +1,6 @@
-import React from "react";
 import RegisterForm from "../../components/RegisterForm/RegisterForm";
-import { useSelector } from "react-redux";
-import { Navigate } from "react-router-dom";
-import { selectIsloggetIn } from "../../redux/auth/selectors";
 
 const register = () => {
-  const isLoggedIn = useSelector(selectIsloggetIn);
-  if (isLoggedIn) {
-    return <Navigate to="/" />;
-  }
   return (
     <>
       <RegisterForm />

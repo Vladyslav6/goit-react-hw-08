@@ -12,6 +12,8 @@ import ContactsItem from "./pages/contactsItem/ContactsItem";
 import Layout from "./components/Layout/Layout";
 import { refreshThunk } from "./redux/auth/operations";
 import { selectIsRefreshing } from "./redux/auth/selectors";
+import PrivedRoute from "./components/PrivedRoute/PrivedRoute";
+import RestrictedRoute from "./components/RestrictedRoute/RestrictedRoute";
 //
 //
 function App() {
@@ -25,9 +27,21 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="contacts" element={<ContactsItem />} />
+          <Route
+            path="contacts"
+            element={
+              <PrivedRoute>
+                <ContactsItem />
+              </PrivedRoute>
+            }
+          />
         </Route>
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={
+            <RestrictedRoute component={<Login />} redirectTo="/contacts" />
+          }
+        />
         <Route path="/register" element={<Register />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
