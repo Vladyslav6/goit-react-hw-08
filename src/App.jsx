@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 
 import { useEffect } from "react";
-import { fetchContactsData } from "./redux/contacts/contactsOps";
+import { fetchContactsData } from "./redux/contacts/operations";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";

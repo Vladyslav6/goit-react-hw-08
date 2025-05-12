@@ -3,8 +3,9 @@ import {
   addContactDataThunk,
   deleteContactData,
   fetchContactsData,
-} from "./contactsOps";
+} from "./operations";
 import { logoutThunk } from "../auth/operations";
+import { selectContacts } from "./selectors";
 
 const initialState = {
   contacts: {
@@ -67,9 +68,9 @@ const slice = createSlice({
   },
 });
 
-export const selectContacts = (state) => state.item.contacts.items;
-export const selectError = (state) => state.item.contacts.error;
-export const selectLoading = (state) => state.item.contacts.Loading;
+// export const selectContacts = (state) => state.item.contacts.items;
+// export const selectError = (state) => state.item.contacts.error;
+// export const selectLoading = (state) => state.item.contacts.Loading;
 
 export const selectFilteredContacts = createSelector(
   [selectContacts, (state) => state.filter.filter],
