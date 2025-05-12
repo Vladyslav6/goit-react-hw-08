@@ -13,8 +13,7 @@ const Header = () => {
   const user = useSelector(selectUser);
   const isLoggedIn = useSelector(selectIsloggetIn);
   const dispatch = useDispatch();
-  console.log(user.name);
-  console.log(isLoggedIn);
+
   return (
     <header className={css.header}>
       <nav className={css.nav}>
@@ -37,7 +36,7 @@ const Header = () => {
         </NavLink>
       </nav>
 
-      {isLoggedIn && <h2>{user.name}</h2>}
+      {isLoggedIn && <h2 className="text-3xl">{user.name}</h2>}
       {isLoggedIn && (
         <>
           <button

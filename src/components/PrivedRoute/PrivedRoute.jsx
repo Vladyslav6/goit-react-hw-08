@@ -7,7 +7,6 @@ import toast, { Toaster } from "react-hot-toast";
 const PrivedRoute = ({ children }) => {
   const isLoggedIn = useSelector(selectIsloggetIn);
   if (!isLoggedIn) {
-    console.log("Error, добавить тост");
     // toast.error("You are not logged in");
     return <Navigate to="/login" />;
   }

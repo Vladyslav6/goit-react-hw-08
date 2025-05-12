@@ -46,16 +46,6 @@ const slice = createSlice({
       .addCase(refreshThunk.rejected, (state, action) => {
         state.isRefreshing = false;
       });
-    // .addCase("auth/refresh/fulfilled", (state, action) => {
-    //   state.user = action.payload;
-    //   state.isRefreshing = false;
-    // })
-    // .addCase("auth/refresh/pending", (state) => {
-    //   state.isRefreshing = true;
-    // })
-    // .addCase("auth/refresh/rejected", (state) => {
-    //   state.isRefreshing = false;
-    // });
   },
 });
 

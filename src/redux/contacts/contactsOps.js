@@ -15,7 +15,6 @@ export const fetchContactsData = createAsyncThunk(
       const response = await goitAPI.get("/contacts");
       return response.data;
     } catch (error) {
-      console.log(error);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -28,7 +27,6 @@ export const deleteContactData = createAsyncThunk(
       await goitAPI.delete(`/contacts/${id}`);
       return id;
     } catch (error) {
-      console.log(error);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
@@ -41,7 +39,6 @@ export const addContactDataThunk = createAsyncThunk(
       const response = await goitAPI.post("/contacts", body);
       return response.data;
     } catch (error) {
-      console.log(error);
       return thunkAPI.rejectWithValue(error.message);
     }
   }
