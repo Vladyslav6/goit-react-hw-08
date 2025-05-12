@@ -6,7 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
-import NotFound from "./pages/notFound/notFoun";
+import NotFound from "./pages/notFound/NotFound";
 import ContactsItem from "./pages/contactsItem/ContactsItem";
 import Layout from "./components/Layout/Layout";
 import { refreshThunk } from "./redux/auth/operations";
