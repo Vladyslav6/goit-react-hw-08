@@ -13,7 +13,7 @@ export const setActiveClass = ({ isActive }) => {
 };
 
 const AppBar  = () => {
-  const user = useSelector(selectUser);
+  
   const isLoggedIn = useSelector(selectIsloggetIn);
  
 
@@ -26,14 +26,10 @@ const AppBar  = () => {
         <Navigation/> 
         {!isLoggedIn && (
           <AuthNav/>
-        )}
-        
+        )} 
       </nav>
-
-      {isLoggedIn && <h2 className="text-3xl">{user.name}</h2>}
-      {isLoggedIn && (
         <UserMenu/>
-      )}
+      
     </header>
   );
 };
