@@ -17,9 +17,6 @@ const AppBar  = () => {
   return (
     <header className={css.header}>
       <nav className={css.nav}>
-        <NavLink className={setActiveClass} to="/">
-          Home
-        </NavLink>
         <Navigation/> 
         {!isLoggedIn && (
           <AuthNav/>

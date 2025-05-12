@@ -7,7 +7,9 @@ import { useSelector } from 'react-redux';
 const Navigation = () => {
     const isLoggedIn = useSelector(selectIsloggetIn);
   return <>
-  
+            <NavLink className={setActiveClass} to="/">
+            Home
+          </NavLink>
     {isLoggedIn && (
                <NavLink className={setActiveClass} to="/contacts">
           Contacts
