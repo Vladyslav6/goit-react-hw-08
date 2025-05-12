@@ -1,0 +1,26 @@
+.link {
+  color: white;
+  font-size: 26px;
+  text-decoration: none;
+}
+.nav {
+  display: flex;
+  gap: 20px;
+  margin-left: 20px;
+}
+.active {
+  color: red;
+  text-decoration: underline;
+}
+
+header {
+  padding: 20px;
+  background-color: black;
+  color: white;
+
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
