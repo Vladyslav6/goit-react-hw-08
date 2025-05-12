@@ -5,7 +5,7 @@ import { fetchContactsData } from "./redux/contacts/contactsOps";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/home";
 import Login from "./pages/login/Login";
-import Register from "./pages/register/Registe";
+import Register from "./pages/register/Register";
 import NotFound from "./pages/notFound/notFound";
 import ContactsItem from "./pages/contactsItem/ContactsItem";
 import Layout from "./components/Layout/Layout";
