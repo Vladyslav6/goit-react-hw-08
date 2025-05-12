@@ -5,10 +5,9 @@ import { fetchContactsData } from "./redux/contacts/contactsOps";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home/home";
 import Login from "./pages/login/Login";
-import Register from "./pages/register/register";
+import Register from "./pages/register/Registe";
 import NotFound from "./pages/notFound/notFound";
 import ContactsItem from "./pages/contactsItem/ContactsItem";
-
 import Layout from "./components/Layout/Layout";
 import { refreshThunk } from "./redux/auth/operations";
 import { selectIsRefreshing } from "./redux/auth/selectors";
