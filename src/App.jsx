@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchContactsData } from "./redux/contacts/contactsOps";
 import { Route, Routes } from "react-router-dom";
-import Home from "./pages/home/home";
+import Home from "./pages/home/Hom";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import NotFound from "./pages/notFound/notFound";
